@@ -16,7 +16,7 @@ class Tweet {
             tweet.body = jsonObject.getString("text")
             tweet.createdAt = jsonObject.getString("created_at")
             tweet.user = User.fromJson(jsonObject.getJSONObject("user"))
-           // tweet.time = TimeFormatter.getTimeDifference(createdAt.toString())
+            tweet.time = TimeFormatter.getTimeDifference(jsonObject.getString("created_at"))
             return tweet
         }
 
